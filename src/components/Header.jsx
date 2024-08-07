@@ -44,11 +44,11 @@ export default function Header() {
         <div className='' >
           <span className='font-bold border-b-[3px] border-[#3d4152] text-[#3d4152] hover:border-[#fc8019] hover:text-[#fc8019] cursor-pointer'>Depstar</span> Charusat <RxCaretDown fontSize={25} className='inline font-bold text-[#fc8019] hover:cursor-pointer'/>
         </div>
-        <nav className='flex list-none gap-10 ml-auto hover:drop-shadow-2xl '>
+        <nav className='flex list-none gap-10 ml-auto  '>
           {
             links.map(
               (link,indx)=>{
-                return <li className=' flex items-center gap-1 hover:text-[#fc8019] cursor-pointer '>
+                return <li className=' flex hover:drop-shadow items-center gap-1 hover:text-[#fc8019] cursor-pointer '>
                   {link.icon}
                   {link.name}
                   <sup><count className=' text-[#ff1201]  '>{link.sup} </count></sup> 
