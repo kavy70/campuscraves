@@ -1,6 +1,7 @@
 import Category from './components/Category';
 import Header from './components/Header';
 import TopRest from './components/TopRest';
+import OnlineRest from './components/OnlineRest';
 
 function App() {
   return (
@@ -8,8 +9,8 @@ function App() {
     <Header />
     <Category/>
     <TopRest/>
-    </>
-     
+    <OnlineRest/>
+    </>  
     
   );
 }

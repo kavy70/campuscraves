@@ -1,28 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 import Card from './Card';
 
-export default function TopRest() { 
+export default function OnlineRest() { 
 
-  const [slide, setSlide] = useState(0);
-  const nextSlide = () => {
-    console.log(restaurant.length);
-    console.log(slide);
-    if(restaurant.length - 1 === slide){
-      return false;
-    }
-    setSlide(slide + 3);
-    console.log(slide);
-  }
-  const prevSlide = () => {
-    console.log(restaurant.length);
-    
-    if(slide===0){
-      return false;
-    }
-    setSlide(slide - 3);
-  }
 
   const restaurant = [
     {
@@ -130,24 +111,16 @@ export default function TopRest() {
   return (
     <div className='max-w-[1200px] overflow-hidden mx-auto '>
       <div className='flex my-3 justify-between items-center'>
-        <div className=' text-[27px] font-bold'>Top restaurant chains in Charusat</div>
-        <div className='flex '>
-          <div className='flex justify-center items-center w-[30px] h-[30px] bg-[#e2e2e7] rounded-full mx-2' onClick={prevSlide}><FaArrowLeft />
-          </div>
-          <div className='flex justify-center  items-center w-[30px] h-[30px] bg-[#e2e2e7] rounded-full mx-2' onClick={nextSlide}><FaArrowRight />
-          </div>
-        </div>
+        <div className=' text-[27px] font-bold'>Today Top ordered in Charusat</div>
+       
       </div>
       
-     <div className='flex gap-5'>
+     <div className='grid  grid-cols-4 gap-3'>
       { 
        restaurant.map(
           (d,i)=>{
             return (
-              <div style={{
-                transform: `translateX(-${slide * 100}%)`,
-                // transform:`translateX(-600%)`
-              }} key={i} className='w-full h-full duration-500'>
+              <div className='w-full h-full '>
                 <Card{...d} key={i}/>
               </div>
               )
@@ -156,7 +129,7 @@ export default function TopRest() {
       }
 
      </div>
-      <hr className='my-6 border-[1px]' />
+
     </div>
   )
   }

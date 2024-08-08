@@ -36,7 +36,7 @@ export default function Header() {
     }
   ]
   return (
-    <header className='p-[15px] shadow-xl'>
+    <header className='p-[15px] shadow-xl sticky top-0 bg-white z-[9999]'>
       <div className=' max-w-[1200px] mx-auto flex items-center'>
         <div className=' max-w-[60px] '>
           <img src="images/logo2.webp" className=' w-[full]' alt="" />

@@ -4,7 +4,6 @@ export default function Category() {
   const [slide, setSlide] = useState(0);
 
   const nextSlide = () => {
-    console.log(categories.length);
     
     if(categories.length - 6 === slide){
       return false;
@@ -12,9 +11,7 @@ export default function Category() {
     setSlide(slide + 3);
   }
   const prevSlide = () => {
-    console.log(categories.length);
    
-    
     if(slide===0){
       return false;
     }

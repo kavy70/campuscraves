@@ -3,8 +3,8 @@ import React from 'react'
 export default function Card(props) {
   return (
     <div className='w-[273px]  shrink-0 grow '>
-        <div className='h-[182px] rounded-[15px] overflow-hidden relative'>
-            <img className='object-cover w-full h-full' src={props.image} alt="nn" />
+        <div className=' group h-[182px] rounded-[15px] overflow-hidden relative'>
+            <img className=' group-hover:scale-110 duration-150 object-cover w-full h-full' src={props.image} alt="nn" />
             <div className='image-overlay absolute w-full h-full top-0 flex items-end font-bold p-2 text-white text-[23px] tracking-tighter '>{props.offer}</div>
         </div>
         <div className='mt-3 text-xl font-bold '>{props.title}</div>
